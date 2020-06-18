@@ -1,0 +1,9 @@
+# Backup files
+*~
+
+# debian packager
+debian/files
+debian/python3-keylime*
+debian/.debhelper
+.pybuild
+.eggs

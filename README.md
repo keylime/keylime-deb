@@ -14,3 +14,4 @@ dh-python, and therefore in turn relies on pip3.
 * Python nose tests are currently disabled. They need to be enabled so
   unit tests can run before packaging.
 
+* No services other than keylime-agent have been tested yet.

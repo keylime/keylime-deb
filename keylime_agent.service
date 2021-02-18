@@ -1,9 +1,14 @@
 [Unit]
 Description=The Keylime compute agent
+StartLimitInterval=3600
+StartLimitBurst=5
 
 [Service]
 Environment=TPM2TOOLS_TCTI=device:/dev/tpmrm0
 ExecStart=/usr/bin/keylime_agent
+TimeoutSec=3600
+Restart=on-failure
+RestartSec=10
 
 [Install]
 WantedBy=default.target

@@ -1,13 +1,15 @@
 [Unit]
 After=network.target
 Description=The Keylime verifier
+StartLimitInterval=10s
+StartLimitBurst=5
 
 [Service]
 Environment=TPM2TOOLS_TCTI=device:/dev/tpmrm0
 ExecStart=/usr/bin/keylime_verifier
-TimeoutSec=3600
 Restart=on-failure
-RestartSec=10
+TimeoutSec=60s
+RestartSec=120s
 
 [Install]
 WantedBy=default.target

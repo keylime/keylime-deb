@@ -9,7 +9,8 @@ Build-Depends:
   python3-simplejson,
   python3-zmq,
   python3-tornado,
-  python3-distutils
+  python3-distutils,
+  python3-gnupg
 Homepage: https://github.com/keylime/keylime.git
 
 Package: python3-keylime
@@ -22,7 +23,8 @@ Depends:
   python3-tornado,
   python3-distutils,
   python3-m2crypto,
-  python3-cryptography
+  python3-cryptography,
+  python3-gnupg
 Description: Open source TPM software for Bootstrapping and Maintaining Trust
   Keylime is a TPM based highly scalable remote boot attestation
   and runtime integrity measurement solution.

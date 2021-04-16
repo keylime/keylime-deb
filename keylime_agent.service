@@ -4,6 +4,8 @@ StartLimitInterval=10s
 StartLimitBurst=5
 
 [Service]
+User=keylime
+Group=tss
 Environment=TPM2TOOLS_TCTI=device:/dev/tpmrm0
 ExecStart=/usr/bin/keylime_agent
 TimeoutSec=60s

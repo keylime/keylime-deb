@@ -31,8 +31,8 @@ case "$1" in
         fi
 
 	# The "keylime" user belongs to tss, and we need to give access to /sys/kernel/security/<x>
-        chown -R tss:tss /sys/kernel/security/tpm0
-        chown -R tss:tss /sys/kernel/security/ima
+        test -d /sys/kernel/security/tpm0 && chown -R tss:tss /sys/kernel/security/tpm0
+        test -d /sys/kernel/security/ima && chown -R tss:tss /sys/kernel/security/ima
 
 #        # ask udev to check for new udev rules (and fix device permissions)
 #        if udevadm --version > /dev/null; then

@@ -43,7 +43,7 @@ case "$1" in
             chown -R tss:tss /sys/kernel/security/tpm0
         fi
 
-        if [ test -d /sys/kernel/security/ima ] ; then
+        if [ -d /sys/kernel/security/ima ] ; then
             chown -R tss:tss /sys/kernel/security/ima
         fi
 

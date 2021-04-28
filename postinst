@@ -9,6 +9,14 @@ case "$1" in
             addgroup --system tss
         fi
 
+        # creating tss user if he isn't already there
+        if ! getent passwd tss >/dev/null; then
+            adduser --system --ingroup tss --shell /bin/false \
+                    --home /var/lib/tpm --no-create-home \
+                    --gecos "TPM software stack" \
+                    tss
+        fi
+
         # creating keylime user if he isn't already there
         if ! getent passwd keylime >/dev/null; then
             adduser --system --ingroup tss --shell /bin/false \
